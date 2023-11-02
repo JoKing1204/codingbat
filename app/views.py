@@ -4,7 +4,7 @@ from django.http.request import HttpRequest
 from django.http.response import HttpResponse
 
 
-def warmup_1(request: HttpRequest, n) -> HttpResponse:
+def warmup_1(request: HttpRequest, n:int) -> HttpResponse:
    return HttpResponse((abs(100 - n) <= 10) or (abs(200 - n) <= 10))
 
 def warmup_2(request: HttpRequest, res) -> HttpResponse:
@@ -14,7 +14,7 @@ def warmup_2(request: HttpRequest, res) -> HttpResponse:
     return HttpResponse(result)
 
 
-def string_2(request: HttpRequest, c) -> HttpResponse:
+def string_2(request: HttpRequest, c:str) -> HttpResponse:
     count1 = 0
     count2 = 0
    
@@ -31,7 +31,7 @@ def string_2(request: HttpRequest, c) -> HttpResponse:
         return HttpResponse(False)
 
 
-def logic_2(request: HttpRequest, a, b, c) -> HttpResponse:
+def logic_2(request: HttpRequest, a:str, b:str, c:str) -> HttpResponse:
     
   if a==b==c:
     return HttpResponse(0)
