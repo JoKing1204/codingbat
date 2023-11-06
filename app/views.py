@@ -7,7 +7,7 @@ from django.http.response import HttpResponse
 def warmup_1(request: HttpRequest, n:int) -> HttpResponse:
    return HttpResponse((abs(100 - n) <= 10) or (abs(200 - n) <= 10))
 
-def warmup_2(request: HttpRequest, res) -> HttpResponse:
+def warmup_2(request: HttpRequest, res:str) -> HttpResponse:
     result = ""
     for i in range(len(res)):
         result = result + res[:i + 1]
